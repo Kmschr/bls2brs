@@ -90,6 +90,11 @@ lazy_static! {
         "1x2 Octo Plate90" => BrickDesc::new("B_2x2F_Octo").direction_override(YNegative).offset((3, 0, 0)),
         "2x2 Octo Brick90" => BrickDesc::new("B_2x_Octo").direction_override(YNegative),
 
+        // Tophius Poles
+        "1x1F Pole" => BrickDesc::new("PB_DefaultPole").size((3, 3, 2)),
+        "1x1 Pole" => BrickDesc::new("PB_DefaultPole").size((3, 3, 6)),
+        "1x1x3 Pole" => BrickDesc::new("PB_DefaultPole").size((3, 3, 18)),
+
         // # Approximate mappings
 
         "2x2 Disc" => BrickDesc::new("B_2x2F_Round"),
