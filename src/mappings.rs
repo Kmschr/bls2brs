@@ -95,6 +95,12 @@ lazy_static! {
         "1x1 Pole" => BrickDesc::new("PB_DefaultPole").size((3, 3, 6)),
         "1x1x3 Pole" => BrickDesc::new("PB_DefaultPole").size((3, 3, 18)),
 
+        // Wedges
+        "1x1F Wedge" => BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).rotation_offset(0),
+        "1x1 Wedge" => BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 6)).rotation_offset(0),
+        "3x3 Tapered Wedge" => BrickDesc::new("PB_DefaultSideWedge").size((15, 15, 6)).rotation_offset(3),
+        "4x4 Tapered Wedge" => BrickDesc::new("PB_DefaultSideWedge").size((20, 20, 6)).rotation_offset(0),
+
         // # Approximate mappings
 
         "2x2 Disc" => BrickDesc::new("B_2x2F_Round"),
@@ -105,6 +111,7 @@ lazy_static! {
         "Gravestone" => BrickDesc::new("B_Gravestone"),
         "House Door" => GENERIC_DOOR.clone(),
         "Plain Door" => GENERIC_DOOR.clone(),
+        "No Lines 1x1" => BrickDesc::new("PB_DefaultMicroBrick").size((5, 5, 6)),
 
         "2x2 Octo" => vec![
             BrickDesc::new("B_2x2F_Octo").offset((0, 0, -4)),
@@ -530,6 +537,60 @@ lazy_static! {
             BrickDesc::new("PB_DefaultMicroWedge").size((15, 1, 15)).offset((0, 10, 1)).microwedge_rotate(true),
             BrickDesc::new("PB_DefaultMicroBrick").size((10, 5, 1)).offset((0, -15, 17)),
         ],
+
+        // Wedges
+        "8x8F Wedge" => vec![
+            BrickDesc::new("PB_DefaultSideWedge").size((40, 40, 2)).rotation_offset(3),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((-35, -35, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((-25, -35, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((-25, -25, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((-15, -25, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((-15, -15, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((-5, -15, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((-5, -5, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((5, -5, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((5, 5, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((15, 5, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((15, 15, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((25, 15, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((25, 25, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((35, 25, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((35, 35, 0)),
+        ],
+        "6x6F Wedge" => vec![
+            BrickDesc::new("PB_DefaultSideWedge").size((30, 30, 2)).rotation_offset(3),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((-25, -25, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((-15, -25, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((-15, -15, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((-5, -15, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((-5, -5, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((5, -5, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((5, 5, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((15, 5, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((15, 15, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((25, 15, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((25, 25, 0)),
+        ],
+        "4x4F Wedge" => vec![
+            BrickDesc::new("PB_DefaultSideWedge").size((20, 20, 2)).rotation_offset(3),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((-15, -15, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((-5, -15, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((-5, -5, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((5, -5, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((5, 5, 0)),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((15, 5, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((15, 15, 0)),
+        ],
+        "3x3F Wedge" => vec![
+            BrickDesc::new("PB_DefaultSideWedge").size((15, 15, 2)).rotation_offset(0),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((10, -10, 0)).rotation_offset(2),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(0).offset((10, 0, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).rotation_offset(2),
+            BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(0).offset((0, 10, 0)),
+            BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((-10, 10, 0)).rotation_offset(2),
+            //BrickDesc::new("PB_DefaultSideWedgeTile").size((5, 5, 2)).rotation_offset(3).offset((5, -5, 0)),
+            //BrickDesc::new("PB_DefaultSideWedge").size((5, 5, 2)).offset((5, 5, 0)),
+        ],
     ];
 
     pub static ref BRICK_MAP_REGEX: Vec<(Regex, RegexHandler)> = brick_map_regex![
@@ -664,10 +725,7 @@ lazy_static! {
             let height = if captures.name("steep").is_some() {
                 size * 2 * 5
             } else if captures.name("three_quarters").is_some() {
-                match size {
-                    8 => 5 * 6,
-                    _ => return None
-                }
+                size / 4 * 5 * 3
             } else if captures.name("half").is_some() {
                 size / 2 * 5
             } else if captures.name("quarter").is_some() {
